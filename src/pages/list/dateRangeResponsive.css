@@ -1,0 +1,25 @@
+/* Override react-date-range default width */
+.rdrCalendarWrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Reduce padding for smaller devices */
+@media (max-width: 768px) {
+  .rdrCalendarWrapper {
+    font-size: 14px;
+  }
+  .rdrMonth {
+    width: 100% !important;
+  }
+}
+
+/* Stack calendars vertically on small screens */
+@media (max-width: 480px) {
+  .rdrMonths {
+    flex-direction: column !important;
+  }
+  .rdrMonth {
+    width: 100% !important;
+  }
+}

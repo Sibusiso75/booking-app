@@ -4,35 +4,36 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap; /* allows wrapping */
 }
 
-.fpItem{
-  flex: 1;
+.fpItem {
+  flex: 1 1 calc(25% - 20px); /* 4 per row by default */
   gap: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.fpImg{
+.fpImg {
   width: 100%;
   height: 250px;
   object-fit: cover;
 }
 
-.fpName{
+.fpName {
   color: #333;
   font-weight: bold;
 }
 
-.fpCity{
+.fpCity {
   font-weight: 300;
 }
 
-.fpPrice{
+.fpPrice {
   font-weight: 500;
 }
 
-.fpRating>button{
+.fpRating > button {
   background-color: #003580;
   color: white;
   border: none;
@@ -41,6 +42,26 @@
   font-weight: bold;
 }
 
-.fpRating>span{
+.fpRating > span {
   font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .fpItem {
+    flex: 1 1 calc(50% - 20px); /* 2 per row */
+  }
+  .fpImg {
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .fpItem {
+    flex: 1 1 100%; /* full width */
+  }
+  .fpImg {
+    height: 180px;
+  }
 }

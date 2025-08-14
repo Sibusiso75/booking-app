@@ -1,12 +1,30 @@
-.homeContainer{
+.homeContainer {
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  padding: 0 16px; /* ensures content has breathing room on small screens */
 }
 
-.homeTitle{
-  width: 1024px;
+.homeTitle {
+  width: 100%;
+  max-width: 1024px;
   font-size: 20px;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .homeTitle {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .homeTitle {
+    font-size: 16px;
+    text-align: center;
+  }
 }
