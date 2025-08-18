@@ -28,7 +28,7 @@
 }
 
 .header {
-  background-color: #003580;
+  background-image:url("../../assets/abstract-background-with-low-poly-design.jpg");
   color: white;
   display: flex;
   justify-content: center;

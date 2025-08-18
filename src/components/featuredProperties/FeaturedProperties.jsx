@@ -1,4 +1,5 @@
 import "./featuredProperties.css";
+import {useNavigate} from "react-router-dom"
 
 const FeaturedProperties = () => {
   return (
@@ -10,7 +11,7 @@ const FeaturedProperties = () => {
           className="fpImg"
         />
         <span className="fpName">Aparthotel Stare Miasto</span>
-        <span className="fpCity">Madrid</span>
+        <span className="fpCity">Cape Town</span>
         <span className="fpPrice">Starting from R2000</span>
         <div className="fpRating">
           <button>8.9</button>

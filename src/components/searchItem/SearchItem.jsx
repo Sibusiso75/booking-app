@@ -3,11 +3,12 @@ import { useNavigate } from "react-router-dom";
 const SearchItem = () => {
   let navigate = useNavigate()
   return (
-    <div className="searchItem">
+    <div className="searchItem" >
       <img
         src="https://cf.bstatic.com/xdata/images/hotel/square600/261707778.webp?k=fa6b6128468ec15e81f7d076b6f2473fa3a80c255582f155cae35f9edbffdd78&o=&s=1"
         alt=""
         className="siImg"
+        onClick={()=>navigate("/hotel")}
       />
       <div className="siDesc">
         <h1 className="siTitle">Tower Street Apartments</h1>
@@ -27,11 +28,10 @@ const SearchItem = () => {
       <div className="siDetails">
         <div className="siRating">
           <span>Excellent</span>
-          <button>8.9</button>
+          <button style={{background:"green",border:"none", color:"white"}}>8.9</button>
         </div>
         <div className="siDetailTexts">
-          <span className="siPrice">R2000</span>
-          <span className="siTaxOp">Includes taxes and fees</span>{''}
+          <span> R2000 Includes taxes and fees</span>
           <button className="siCheckButton" onClick={()=>navigate("/hotel")}>See availability</button>
         </div>
       </div>
