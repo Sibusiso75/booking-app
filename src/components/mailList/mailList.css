@@ -1,7 +1,9 @@
-body{
-  margin:0px;
-  padding:0px;
+body {
+  margin: 0;
+  padding: 0;
 }
+
+/* Main container */
 .mail {
   width: 100%;
   margin-top: 50px;
@@ -18,10 +20,13 @@ body{
 
 .mailTitle {
   font-size: 24px;
+  font-weight: bold;
 }
 
 .mailDesc {
   font-size: 16px;
+  max-width: 600px;
+  line-height: 1.5;
 }
 
 /* Input container */
@@ -30,11 +35,13 @@ body{
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
+  max-width: 600px;
 }
 
 .mailInputContainer > input {
-  width: 300px;
-  max-width: 100%;
+  flex: 1;
+  min-width: 250px;
   height: 40px;
   padding: 10px;
   border: none;
@@ -51,9 +58,14 @@ body{
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-/* --- Mobile responsiveness --- */
+.mailInputContainer > button:hover {
+  background-color: #005999;
+}
+
+/* --- Tablet responsiveness --- */
 @media screen and (max-width: 768px) {
   .mail {
     padding: 30px 20px;
@@ -68,10 +80,39 @@ body{
     font-size: 14px;
   }
 
+  .mailInputContainer {
+    flex-direction: column;
+    gap: 12px;
+  }
+
   .mailInputContainer > input,
   .mailInputContainer > button {
     width: 100%;
-    height: 40px;
-    margin: 0;
+  }
+}
+
+/* --- Small phone responsiveness --- */
+@media screen and (max-width: 480px) {
+  .mail {
+    padding: 20px 15px;
+  }
+
+  .mailTitle {
+    font-size: 18px;
+  }
+
+  .mailDesc {
+    font-size: 13px;
+  }
+
+  .mailInputContainer > input {
+    font-size: 14px;
+    height: 38px;
+  }
+
+  .mailInputContainer > button {
+    font-size: 14px;
+    height: 38px;
+    padding: 0 15px;
   }
 }
